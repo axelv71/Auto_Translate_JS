@@ -1,5 +1,5 @@
 /*
-    Auto Translate | Version 0.5
+    Auto Translate | Version 0.5.1
     Created by Axel Vion
     GitHub : UnPotDeYaourt
 
@@ -17,7 +17,11 @@ window.onload = () => {
 
     for (var i = 0; i < document.getElementsByClassName("trlText").length; i++) {
         var e = document.getElementsByClassName("trlText")[i];
-        translate(i, e.textContent);
+        if(document.getElementsByClassName("trlText")[i].tagName == "INPUT") {
+            translate(i, document.getElementsByClassName("trlText")[i].placeholder);
+        } else {
+            translate(i, e.textContent);
+        }   
     }
 
     function translate(id, text) {
@@ -42,8 +46,11 @@ window.onload = () => {
         request.onreadystatechange = function () {
             if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
                 var response = JSON.parse(this.responseText);
-                //console.log(response.translation[0]);
-                document.getElementsByClassName("trlText")[id].innerHTML = response.translation[0];
+                if(document.getElementsByClassName("trlText")[id].tagName == "INPUT") {
+                    document.getElementsByClassName("trlText")[id].placeholder = response.translation[0];
+                } else {
+                    document.getElementsByClassName("trlText")[id].innerHTML = response.translation[0];
+                }  
 
             }
         };

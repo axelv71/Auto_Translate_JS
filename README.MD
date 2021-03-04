@@ -1,4 +1,4 @@
-# Auto Translate Javascript | Version 0.5
+# Auto Translate Javascript | Version 0.5.1
 
 > ## How it works ?
 
@@ -35,6 +35,10 @@ The list of languages is :
 Finally add the class _"trlText_" on all the tags containing text
 
 ![step_4](https://axelvion.000webhostapp.com/img/github/step_4.png)
+
+The plugin works the same way with the _input_ _placeholders_
+
+![step_4](https://axelvion.000webhostapp.com/img/github/step_4.bis.png)
 
 ## Enjoy !
 
