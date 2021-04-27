@@ -4,11 +4,15 @@
 
 To start, download and insert the _"auto_translate.js"_ file at the bottom of your HTML page 
 
-![step_1](https://axelvion.000webhostapp.com/img/github/step_1.png)
+```
+<script src="./auto_translate.js"></script>
+```
 
 Then, on a _"div"_ or the _"body"_ at the top of the page, add the id _"trlInit"_ and _data-trlfrom = ""_ and _data-trlto = ""_.
 
-![step_2](https://axelvion.000webhostapp.com/img/github/step_2.png)
+```
+<div id="trlInit" data-trlfrom="" data-trlto=""></div>
+```
 
 In _"data-trlfrom"_ enter the language of your page and in _"data-trlto"_ enter in which language you want to translate it.
 
@@ -30,15 +34,24 @@ The list of languages is :
 * Spanish = 'spa'
 * Turkish = 'tur'
 
-![step_3](https://axelvion.000webhostapp.com/img/github/step_3.png)
+
+```
+<div id="trlInit" data-trlfrom="eng" data-trlto="fra"></div>
+```
 
 Finally add the class _"trlText_" on all the tags containing text
 
-![step_4](https://axelvion.000webhostapp.com/img/github/step_4.png)
+```
+<p class="trlText">Hello<p>
+<p class="trlText">I love cat<p>
+<p class="trlText">I am tired<p>
+```
 
 The plugin works the same way with the _input_ _placeholders_
 
-![step_4](https://axelvion.000webhostapp.com/img/github/step_4.bis.png)
+```
+<input class="trlText" type="text" placeholder="Hello" >
+```
 
 ## Enjoy !
 
